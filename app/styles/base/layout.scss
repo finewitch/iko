@@ -1,0 +1,38 @@
+.temporary_content {
+    width: 60%;
+    height: 80%;
+    background: #FEFDFF;
+    margin: 0 auto;
+    box-shadow: 0px 0px 24px -4px rgba(66, 66, 66, 0.63);
+    color: $main_red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 50%;
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 40px;
+    }
+    h3,
+    h4 {
+        text-align: center;
+        color: darkslategray;
+        font-weight: 300;
+    }
+    &-main {
+        text-align: center;
+        img {
+            max-width: 100px;
+        }
+        img.fb {
+            max-width: 40px;
+            cursor: pointer;
+        }
+    }
+}
