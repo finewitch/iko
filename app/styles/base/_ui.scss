@@ -8,11 +8,13 @@
     color: $main_red;
     font-size: 1.3em;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-weight: bold;
     // display: flex;
     // justify-content: space-between;
     img {
         width: 35px;
+        height: 35px;
         margin-left: -15px;
         margin-right: 15px;
     }
@@ -23,6 +25,9 @@
     background: transparent;
     border-radius: 0px;
     color: $main_white;
-    padding: .9em;
-    font-size: 1.3em;
+    height: 80px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

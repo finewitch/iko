@@ -1,0 +1,136 @@
+.landing-wrapper {
+    // height: 100%;
+    &-mainpic {
+        img {
+            width: 100%;
+        }
+    }
+}
+.presidentpdf {
+    position: relative;
+    padding-top: 85px;
+    background: $main_red;
+    height: 500px;
+    &-btngroup {
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -70px;
+        background: $main_red;
+        display: flex;
+        button {
+            flex: 1;
+            margin: 15px;
+            margin: 20px 30px;
+        }
+    }
+    div {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        color: $main_white;
+    }
+    h3 {
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.main-section {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    margin: 50px auto 120px auto;
+    h1 {
+        color: $main_red;
+        text-align: center;
+        margin:0px;
+        margin-bottom:50px;
+    }
+    div.num-container {
+        position: relative;
+        margin-bottom: 60px;
+        display: flex;
+        div.number {
+            color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin-bottom: 0px;
+            span {
+                font-family: 'Arvo';
+                font-size: 4em;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $main_red;
+            }
+            span.sub {
+                border: 1px solid $lighter_red;
+                border-style: solid none none none;
+                font-size: .8em;
+                height: 35px;
+                text-transform: lowercase;
+                color: $lighter_red;
+            }
+        }
+        p {
+            font-size: 1.3em;
+            // margin-top:30px;
+            flex: 5;
+            margin-bottom: 0;
+        }
+    }
+    &-mainvideo{
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+        margin: 40px 0px;
+    }
+}
+footer{
+    background: $darker_red;
+    height:400px;
+    width:100%;
+    .main-section{
+        position: relative;
+        .logo-holder{
+            position: absolute;
+            top:0;
+            left:0;
+            background: $main_red;
+            width:107px;
+            height:90px;
+            padding:8px;
+            padding-top:30px;
+            span{
+                color:white;
+                text-transform: uppercase;
+                font-size:15px;
+                width:100%;
+                display: block;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            span.name{
+                letter-spacing: 7px;
+            }
+        }
+    }
+}

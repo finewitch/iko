@@ -1,21 +1,18 @@
-// bower:scss
-// endbower
+
 @import 'base/variables';
+@import 'base/typo';
 @import 'base/layout';
 @import 'base/ui';
-html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     -webkit-font-smoothing: antialiased;
-    background: $main_red;
-    color: #333;
-    font-family: 'Merriweather', serif;
-    letter-spacing: 1px;
+    background: $main_white;
+    color: $main_text;
+    font-family: 'Ubuntu', serif;
+    letter-spacing: 1.1px;
     font-size: 16px;
 }
 
@@ -29,5 +26,5 @@ body {
 main {
     width: 100%;
     height: 100%;
-    color: $main_white;
+    // color: $main_white;
 }
