@@ -18,29 +18,66 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <div class="main-navigation-logo">
+                <p>Piotr Ikonowicz</p>
+                <!-- <p>kandydat na prezydenta Warszawy</p> -->
+            </div>
+            <div class="main-navigation">
+                <a href="#">Media o nas <span></span></a>
+                <a href="#">Spacer po Warszawie <span></span></a>
+                <a href="#">O mnie <span></span></a>
+                <a href="#">O partii <span></span></a>
+                <a href="#">kontakt <span></span></a>
+            </div>
+        </nav>
+    </header>
     <main>
+        <div id="donate" class="modal fade popup-basic" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img src="images/icons/cancel.svg"></button>
+                </div>
+                <div class="modal-body donate">
+                    <img src="images/icons/cash-red.svg">
+                    <div class="box-container">
+                        <div class="box-basic">1 zł</div>
+                        <div class="box-basic">2 zł</div>
+                        <div class="box-basic">3 zł</div>
+                    </div>
+                    <button class="donate-pay">zapłać</button>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+
         <div class="landing-wrapper">
             <div class="landing-wrapper-mainpic">
-                <img src='images/mainpic.jpg'>
+                <img src='images/lg2.jpg'>
             </div>
             <div class="landing-wrapper presidentpdf">
                 <div class="landing-wrapper presidentpdf-btngroup col-lg-12 row">
                     <button class="btn-basic border-white"><img src='images/icons/volunter.svg'>Wolontariat</button>
-                    <button class="btn-basic border-white"><img src='images/icons/cash.svg'>Wesprzyj</button>
+                    <button type="button" class="btn-basic border-white" data-toggle="modal" data-target="#donate">
+                        <img src='images/icons/cash.svg'>Wesprzyj
+                    </button>
                     <button class="btn-basic border-white"><img src="images/icons/join.svg">Dołącz</button>
                 </div>
                 <div>
                     <h1>RUCH SPRAWIEDLIWOŚCI SPOŁECZNEJ - PROGRAM</h1>
                     <h3>Zadaniem Ruchu Sprawiedliwości Społecznej jest budowa takiego państwa, które opowie się po stronie zapracowanej większości.</h3>
-                    <button class="btn-basic">Zobacz program</button>
+                    <a class="a-basic" href="http://docdro.id/VuPWPpR" target="_blank">Zobacz program</a>
                 </div>
             </div>
         </div>
@@ -65,18 +102,30 @@
                         zł. nie da się wyżyć i utrzymać najskromniejszego nawet mieszkania.
                     </p>
                 </div>
+
+                <div class="num-container">
+                    <div class="number">
+                        <span>3</span>
+                        <span class="sub">postulat</span>
+                    </div>
+                    <p> Warszawa, którą chcę stworzyć to miasto, z którego młodzież nie emigruje z powodu braku perspektyw na zdobycie mieszkania. W tym celu miasto wybuduje mieszkania komunalne z tanim czynszem, które będą mogły wynajmować młode osoby już przy pierwszym zatrudnieniu. </p>
+                </div>
             </div>
         </section>
         <div class="full-width presidentpdf">
             <div>
+
                 <h1>Piotr Ikonowicz - kandydat na prezydenta Warszawy</h1>
+
                 <h3>Wizja miasta Piotra Ikonowicza, kandydata Ruchu Sprawiedliwości Społecznej na urząd prezydenta Warszawy.</h3>
                 <button class="btn-basic">Zobacz program</button>
             </div>
         </div>
         <section>
             <div class="main-section">
+
                 <h3>Piotr Ikonowicz o reprywatyzacji</h3>
+
                 <div class="main-section-mainvideo">
                     <iframe width="760" height="415" src="https://www.youtube.com/embed/BgjodHgGf8g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
@@ -88,8 +137,43 @@
             <div class="logo-holder">
                 <span class="name">Piotr</span> <span>Ikonowicz</span>
             </div>
+            <div class="main-section-footer">
+                <div class="main-section-footer-group">
+                    <p>Work with us</p>
+                    <span>Lorem ipsum lorem iposum
+                        Lorem ipsum lorem iposum
+                        Lorem ipsum lorem iposum
+                    </span>
+                </div>
+
+                <div class="main-section-footer-group">
+                    <p>Work with us</p>
+                    <span>Lorem ipsum lorem iposum
+                        Lorem ipsum lorem iposum
+                        Lorem ipsum lorem iposum
+                    </span>
+                </div>
+
+                <div class="main-section-footer-group">
+                    <p>Kontakt</p>
+                    <span> 
+                        <p>ul. Yolo 21 Warszawa</p>
+                        <p>yolo@yolo.com</p>
+                        <p>tel: + 34 987 567 123</p>
+                        <img src="images/icons/fb.svg">
+                        <img src="images/icons/twitter.svg">
+                    </span>
+                </div>
+            </div>
+            <!-- <div class="main-links">
+                <span>MENU</span>
+                <span>MENU</span>
+                <span>MENU</span>
+            </div> -->
         </div>
     </footer>
+    <!-- Modal -->
+
 
 
 
@@ -119,6 +203,9 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <!-- endbuild -->
 </body>
 

@@ -1,3 +1,18 @@
+a{
+    padding:0;
+    margin:0;
+}
+a.a-basic{
+    margin-top:40px;
+    padding: 10px 55px;
+    border: none;
+    background: $main_white;
+    color: $main_red;
+    font-size: 1.3em;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
 .btn-basic {
     margin: 0 auto;
     padding: 15px;
@@ -30,4 +45,80 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.popup-basic{
+    margin-top:200px;
+    .box-basic{
+        border:2px solid $lighter_red;
+        color: $lighter_red;
+        cursor: pointer;
+        &:hover{
+            border:3px solid $main_red;
+            color: $main_red;
+        }
+    }
+    .donate{
+        padding: 20px 50px 50px 50px;
+        // padding:50px;
+        button.donate-pay{
+            margin:0 auto;
+            display: block;
+            padding:15px;
+            min-width:140px;
+            color: $main_white;
+            background: $main_red;
+            border:none;
+            border-radius: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        p{
+            text-align: right;
+            font-size:1.4em;
+            color: $main_red;
+            font-weight: bold;
+        }
+        img{
+            width:70px;
+            display: block;
+            margin: 0 auto;
+        }
+        .box-container{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+
+            .box-basic{
+                margin-top:50px;
+                width:110px;
+                height:110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size:1.4em;
+                font-weight: bold;
+            }
+        }
+    }
+    .modal{
+        &-content{
+            border-radius:0;
+            border:none;
+        }
+        &-header{
+            // background:$main_red;
+            border-bottom:none;
+            border-radius:0;
+            padding-bottom:0;
+            button{
+                color:white;
+                img{
+                    width:40px;
+                }
+            }
+            button.close{
+                opacity:1;
+            }
+        }
+    }
 }

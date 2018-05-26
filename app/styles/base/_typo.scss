@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'BonaNova';
+    src: url('fonts/BonaNova-Regular.otf');
+}
 h1 {
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -8,4 +12,11 @@ h3{
 }
 h1.main-header{
     padding:60px 0px;
+}
+a{
+    color: $black;
+    position: relative;
+}
+button{
+    letter-spacing: 2px;
 }
