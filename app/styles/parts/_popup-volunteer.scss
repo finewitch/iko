@@ -1,0 +1,21 @@
+#volunteer, #join{
+    p{
+        span{
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    }
+    .input-group{
+        justify-content: space-between;
+    }
+    input{
+        display: block;
+        &:focus{
+            outline:none;
+            border:2px solid $lighter_red;
+        }
+    }
+    .post-code{
+        max-width:45%;
+    }
+}

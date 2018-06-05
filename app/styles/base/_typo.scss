@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'BonaNova';
-    src: url('fonts/BonaNova-Regular.otf');
+    src: url('../fonts/BonaNova-Regular.otf');
 }
 h1 {
     font-weight: bold;
@@ -19,4 +19,7 @@ a{
 }
 button{
     letter-spacing: 2px;
+}
+.p-center{
+    text-align: center;
 }

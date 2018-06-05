@@ -1,8 +1,14 @@
-
 @import 'base/variables';
+@import 'base/ui';
+
 @import 'base/typo';
 @import 'base/layout';
-@import 'base/ui';
+@import 'core/nav';
+@import 'core/footer';
+@import 'parts/popup-volunteer';
+//componants
+@import 'components/recentVideos';
+
 html,body{
     height: 100%;
 }

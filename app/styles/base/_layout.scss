@@ -1,66 +1,4 @@
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .main-navigation-logo{
-        margin-right:auto;
-        width:250px;
-        margin-left:200px;
-        text-transform: uppercase;
-        background: $main_red;
-        height:100px;
-        color: $main_white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top:10px;
-        box-shadow: 7px 10px 68px -35px rgba(51,50,51,1);
-        p{
-            margin:0;
-            margin-top:5px;
-            text-align: center;
-            font-weight: bold;
-            font-size:1.1em;
-        }
-        p:nth-child(2) {
-            font-size:.9em;
-            font-weight: normal;
-        }
-    }
-    .main-navigation{
-        display: flex;
-        justify-content: flex-end;
-        margin-right:10%;
-        a{
-            text-transform: uppercase;
-            margin-right:30px;
-            font-weight: bold;
-            height:70px;
-            padding-top:25px;
-            span{
-                width:100%;
-                height:4px;
-                background: transparent;
-                display: block;
-                position: absolute;
-                bottom:-1px;
-            }
-            &:hover{
-                text-decoration: none;
-                // color: $main_red;
-                color: $black;
-                transition: all .5s;
-                span{
-                    background:$main_red;
-                    transition: all .5s;    
-                    bottom:0;           
-                }
-            }
-        }
-    }
-}
 .landing-wrapper {
     &-mainpic {
         img {
@@ -70,9 +8,9 @@ nav{
 }
 .presidentpdf {
     position: relative;
-    padding-top: 85px;
+    padding-top: 80px;
     background: $main_red;
-    height: 500px;
+    height: 515px;
     &-btngroup {
         padding: 10px;
         position: absolute;
@@ -84,11 +22,13 @@ nav{
         button {
             flex: 1;
             margin: 15px;
-            margin: 20px 30px;
+            &:focus{
+                outline:none;
+            }
         }
     }
     div {
-        max-width: 1000px;
+        max-width: 950px;
         margin: 0 auto;
         text-align: center;
     }
@@ -163,68 +103,5 @@ section {
         display: flex;
         justify-content: center;
         margin: 40px 0px;
-    }
-}
-footer{
-    .main-section{
-        position: relative;
-        margin:0 auto;
-        &-footer{
-            display: flex;
-            justify-content: space-between;
-            margin:0 auto;
-            width:80%;
-            &-group{
-                padding-top:100px;
-                width:300px;
-                span{
-                    color: $gray;
-                    p{
-                        text-transform: none;
-                        color: $gray;
-                    }
-                    img{
-                        width:35px;
-                        margin-right:12px;
-                    }
-                }
-                p{
-                    text-transform: uppercase;
-                    color:white;
-                }
-            }
-        }
-        .logo-holder{
-            position: absolute;
-            top:0;
-            left:0;
-            background: $main_red;
-            width:107px;
-            height:90px;
-            padding:8px;
-            padding-top:30px;
-            span{
-                color:white;
-                text-transform: uppercase;
-                font-size:15px;
-                width:100%;
-                display: block;
-                font-weight: bold;
-                letter-spacing: 1px;
-                text-align: center;
-            }
-            span.name{
-                letter-spacing: 7px;
-            }
-        }
-        .main-links{
-            position: absolute;
-            color:white;
-            bottom:30px;
-            left:0;
-            right:0;
-            display: flex;
-            justify-content: space-around;
-        }
     }
 }

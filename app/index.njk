@@ -1,0 +1,40 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+{% include "utils/popup-donate.njk" %}
+{% include "utils/popup-volunteer.njk" %}
+{% include "utils/popup-join.njk" %}
+    <main>
+        <div class="landing-wrapper">
+            <div class="landing-wrapper-mainpic">
+                <img src='images/lg2.jpg'>
+            </div>
+            <div class="landing-wrapper presidentpdf">
+                <div class="landing-wrapper presidentpdf-btngroup col-lg-12 row">
+                    <button class="btn-basic border-white"  data-toggle="modal" data-target="#volunteer">
+                        <img src='images/icons/volunter.svg'>Wolontariat
+                    </button>
+                    <button type="button" class="btn-basic border-white" data-toggle="modal" data-target="#donate">
+                        <img src='images/icons/cash.svg'>Wesprzyj
+                    </button>
+                    <button class="btn-basic border-white" data-toggle="modal" data-target="#join">
+                    <img src="images/icons/join.svg">Dołącz</button>
+                </div>
+                <div>
+                    <h1>RUCH SPRAWIEDLIWOŚCI SPOŁECZNEJ - PROGRAM</h1>
+                    <h3>Zadaniem Ruchu Sprawiedliwości Społecznej jest budowa takiego państwa, które opowie się po stronie zapracowanej większości.</h3>
+                    <a class="a-basic" href="http://docdro.id/VuPWPpR" target="_blank">Zobacz program</a>
+                </div>
+            </div>
+        </div>
+
+        {% include "components/programKeys.njk" %}
+        {% include "components/personProgram.njk" %}
+
+        {# RECENT VIDEOS #}
+        {# {% include "components/recentVideos.njk" %} #}
+        {% include "components/recentVideosyt.njk" %}
+        {# RECENT VIDEOS end-- #}
+       
+    </main>
+{% endblock %}
