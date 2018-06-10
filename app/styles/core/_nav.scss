@@ -1,60 +1,62 @@
 
+
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .main-navigation-logo{
-        margin-right:auto;
-        width:250px;
-        margin-left:200px;
-        text-transform: uppercase;
-        background: $main_red;
-        height:70px;
-        color: $main_white;
+    .grid-container{
+        max-width:$main-width;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        // padding-top:10px;
-        box-shadow: 7px 10px 68px -35px rgba(51,50,51,1);
-        p{
-            margin:0;
-            text-align: center;
-            font-weight: bold;
-            font-size:1.1em;
-        }
-        p:nth-child(2) {
-            font-size:.9em;
-            font-weight: normal;
-        }
-    }
-    .main-navigation{
-        display: flex;
-        justify-content: flex-end;
-        margin-right:10%;
-        a{
+        margin:0 auto;
+        .main-navigation-logo{
+            margin-right:auto;
+            width:220px;
             text-transform: uppercase;
-            margin-right:30px;
-            font-weight: bold;
+            background: $main_red;
             height:70px;
-            padding-top:25px;
-            span{
-                width:100%;
-                height:4px;
-                background: transparent;
-                display: block;
-                position: absolute;
-                bottom:-1px;
+            color: $main_white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 7px 10px 68px -35px rgba(51,50,51,1);
+            p{
+                margin:0;
+                text-align: center;
+                font-weight: bold;
+                font-size:1em;
             }
-            &:hover{
-                text-decoration: none;
-                // color: $main_red;
-                color: $black;
-                transition: all .5s;
+            p:nth-child(2) {
+                font-size:.9em;
+                font-weight: normal;
+            }
+        }
+        .main-navigation{
+            display: flex;
+            justify-content: flex-end;
+            // margin-right:10%;
+            a{
+                text-transform: uppercase;
+                margin-right:30px;
+                font-weight: bold;
+                height:70px;
+                padding-top:25px;
                 span{
-                    background:$main_red;
-                    transition: all .5s;    
-                    bottom:0;           
+                    width:100%;
+                    height:4px;
+                    background: transparent;
+                    display: block;
+                    position: absolute;
+                    bottom:-1px;
+                }
+                &:hover{
+                    text-decoration: none;
+                    // color: $main_red;
+                    color: $black;
+                    transition: all .5s;
+                    span{
+                        background:$main_red;
+                        transition: all .5s;    
+                        bottom:0;           
+                    }
                 }
             }
         }

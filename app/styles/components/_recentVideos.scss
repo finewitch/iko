@@ -1,12 +1,73 @@
 .videolist-recent{
-    // border:3px solid $lighter_red;
-    // border-style: none none none solid;
-    max-width:950px;
     padding-bottom: 50px;
-    padding-top:50px;
-    // display: flex;
-    &-content{
-    }
+	padding-top:30px;
+	.videosrecent-cont{
+		position: relative;
+		padding-bottom:50px;
+		&-layer{
+			position: absolute;
+			height:100%;
+			width:57%;
+			background: $main_red;
+			margin:0 auto;
+			left:0;right:0;
+			z-index:-1;
+			-webkit-box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
+			-moz-box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
+			box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
+		}
+		&-text{
+			margin:0 auto;
+			width:50%;
+			padding:30px 30px 15px 30px;
+			color: $main_white;
+			.vidrec-title{
+				text-align: left;
+				margin-bottom:20px;
+				line-height: 32px;
+			}
+			.vidrec-desc{
+				font-size:.9em;
+				padding: 10px 0px;
+			}
+
+		}
+		&-video{
+			margin:0 auto;
+			display: flex;
+			justify-content: center;
+		}
+		&-vidtape{
+			margin-top:100px;
+			display: flex;
+			justify-content: space-between;
+			.vid-frame{
+				max-width:350px;
+				position: relative;
+				&-desc{
+					position: absolute;
+					bottom:0;
+					display:inline-block;
+					color:white;
+					background: $main_red;
+					opacity:0;
+					padding:15px;
+					transition: .5s all;
+					height:130px;
+					font-size:.8em;
+					margin-bottom:0px;
+				}
+				&:hover{
+					.vid-frame-desc{
+						opacity:1;
+						transition: .5s all;
+					}
+				}
+			}
+		}
+
+	}
+
     &-infobox{
         overflow-y: scroll;
         height:300px;
@@ -42,11 +103,6 @@
     flex-direction: column;
     width: 250px;
     margin-right:15px;
-    &-content{
-        
-
-    }
-
     &-header{
         text-transform: uppercase;
         margin-bottom:30px;
@@ -72,7 +128,6 @@
             }
         }
         .active-box{
-            // background: $lighter_red;
              .subheader{
                 color: $black;
                 font-size: 0.9em;
@@ -88,136 +143,3 @@
             padding-top:30px;
         }
 }
-
-	/*  VIDEO PLAYER CONTAINER
- 		############################### */
-  		.vid-container {
-		    position: relative;
-		    padding-bottom: 52%;
-		    padding-top: 30px; 
-		    height: 0; 
-		}
-		 
-		.vid-container iframe,
-		.vid-container object,
-		.vid-container embed {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		}
-
-
-		/*  VIDEOS PLAYLIST 
- 		############################### */
-		.vid-list-container {
-			width: 92%;
-			overflow: hidden;
-			margin-top: 20px;
-			margin-left:4%;
-			padding-bottom: 20px;
-		}
-
-		.vid-list {
-			width: 1344px;
-			position: relative;
-			top:0;
-			left: 0;
-		}
-
-		.vid-item {
-			display: block;
-			width: 148px;
-			height: 148px;
-			float: left;
-			margin: 0;
-			padding: 10px;
-		}
-
-		.thumb {
-			/*position: relative;*/
-			overflow:hidden;
-			height: 84px;
-		}
-
-		.thumb img {
-			width: 100%;
-			position: relative;
-			top: -13px;
-		}
-
-		.vid-item .desc {
-			color: #21A1D2;
-			font-size: 15px;
-			margin-top:5px;
-		}
-
-		.vid-item:hover {
-			background: #eee;
-			cursor: pointer;
-		}
-
-		.arrows {
-			position:relative;
-			width: 100%;
-		}
-
-		.arrow-left {
-			color: #fff;
-			position: absolute;
-			background: #777;
-			padding: 15px;
-			left: -25px;
-			top: -130px;
-			z-index: 99;
-			cursor: pointer;
-		}
-
-		.arrow-right {
-			color: #fff;
-			position: absolute;
-			background: #777;
-			padding: 15px;
-			right: -25px;
-			top: -130px;
-			z-index:100;
-			cursor: pointer;
-		}
-
-		.arrow-left:hover {
-			background: #CC181E;
-		}
-
-		.arrow-right:hover {
-			background: #CC181E;
-		}
-
-
-		@media (max-width: 624px) {
-			body {
-				margin: 15px;
-			}
-			.caption {
-				margin-top: 40px;
-			}
-			.vid-list-container {
-				padding-bottom: 20px;
-			}
-
-			/* reposition left/right arrows */
-			.arrows {
-				position:relative;
-				margin: 0 auto;
-				width:96px;
-			}
-			.arrow-left {
-				left: 0;
-				top: -17px;
-			}
-
-			.arrow-right {
-				right: 0;
-				top: -17px;
-			}
-		}
