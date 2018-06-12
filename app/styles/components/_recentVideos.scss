@@ -1,68 +1,91 @@
 .videolist-recent{
     padding-bottom: 50px;
-	padding-top:30px;
+    padding-top:30px;
+    h2{
+        font-size:2.6rem;
+        margin-bottom:80px;
+    }
 	.videosrecent-cont{
 		position: relative;
-		padding-bottom:50px;
+        padding-bottom:100px;
+        &-flex{
+            display: flex;
+        }
 		&-layer{
 			position: absolute;
 			height:100%;
-			width:57%;
+			width:48%;
 			background: $main_red;
 			margin:0 auto;
-			left:0;right:0;
+			left:0;
 			z-index:-1;
-			-webkit-box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
-			-moz-box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
-			box-shadow: -1px 0px 43px -10px rgba(51,50,51,1);
 		}
 		&-text{
-			margin:0 auto;
-			width:50%;
-			padding:30px 30px 15px 30px;
-			color: $main_white;
+			max-width:350px;
+			padding:110px 15px 15px 55px;
+            color: $main_white;
 			.vidrec-title{
-				text-align: left;
+                text-align: left;
 				margin-bottom:20px;
-				line-height: 32px;
+                line-height: 32px;
+                font-weight: bold;
+                line-height: 36px;
+                font-size:23px;
+                text-transform: uppercase;
 			}
 			.vidrec-desc{
-				font-size:.9em;
-				padding: 10px 0px;
+                text-justify: inter-word;
+				font-size:.95em;
+                padding: 10px 0px;
+                line-height:21px;
 			}
 
 		}
 		&-video{
-			margin:0 auto;
-			display: flex;
-			justify-content: center;
-		}
+            margin-left:30px;
+            margin-top:100px;
+            // margin-bottom: -30px;
+            width:calc(100% - 350px);		
+        }
 		&-vidtape{
-			margin-top:100px;
 			display: flex;
-			justify-content: space-between;
+			margin-left:55px;
 			.vid-frame{
-				max-width:350px;
-				position: relative;
+                position: relative;
+                width: 33.3333333%;
 				&-desc{
 					position: absolute;
-					bottom:0;
+					min-height:99%;
 					display:inline-block;
-					color:white;
-					background: $main_red;
-					opacity:0;
-					padding:15px;
+					color:$black;
+                    background: $main_white;
+					padding:45px;
 					transition: .5s all;
 					height:130px;
 					font-size:.8em;
-					margin-bottom:0px;
-				}
-				&:hover{
-					.vid-frame-desc{
-						opacity:1;
-						transition: .5s all;
-					}
-				}
+                    margin-bottom:0px;
+                    line-height: 1.5em;
+                    visibility: visible;
+                    opacity:1;
+                    transition: visibility .5s, opacity 0.5s linear;
+                    h4{
+                        font-weight: bold;
+                        margin-bottom:35px;
+                        font-size:21px;
+                        text-transform: uppercase;
+                    }
+                }
+                &:hover{
+                    .vid-frame-desc{
+                        cursor: pointer;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s, opacity 0.5s linear;
+                    }    
+                }
+                .tape-1{
+                    background: #F7B32B;
+                }
 			}
 		}
 

@@ -1,8 +1,7 @@
 console.log('\'Allo \'Allo!');
-import { getRecentYTVid } from './ajax/YtAjax'
-import { createPlayer } from './components/YtDom'
-import { CLIENT_RENEG_LIMIT } from 'tls';
-import { createCipher } from 'crypto';
+import { getRecentYTVid } from './ajax/YTAjax'
+import { createPlayer } from './components/YTDom'
+
 getRecentYTVid(passDataToPlayer);
 
 function passDataToPlayer(playerSource){

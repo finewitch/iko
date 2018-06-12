@@ -22,4 +22,21 @@ export function getRecentYTVid(passDataToPlayer) {
             console.log(response, 'ERROR');
         })
     });
+
+    // var player;
+    //   function onYouTubeIframeAPIReady() {
+    //       console.log('API CONTROL CENTER');
+    //     player = new YT.Player('player', {
+    //       height: '360',
+    //       width: '640',
+    //       videoId: 'GydlyCkOShA',
+    //       events: {
+    //         'onReady': onPlayerReady,
+    //         'onStateChange': onPlayerStateChange
+    //       }
+    //     });
+    //   }
+    //   function onPlayerReady(event) {
+    //     event.target.playVideo();
+    //   }
 }
