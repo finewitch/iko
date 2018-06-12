@@ -24,7 +24,7 @@ export function createYT1(container, id){
 }
 export function createYTtapeVid(i, id, miniVidScope){
      // scope['counter' + i] = 0;
-     console.log(miniVidScope);
+     // console.log(miniVidScope);
      miniVidScope['vid' + i] = new YT.Player('vid-' + i, {
           height: '430',
           width: '100%',
@@ -34,12 +34,11 @@ export function createYTtapeVid(i, id, miniVidScope){
           },
           events: {
             'onReady': onPlayerReady,
-          'onStateChange' : onPlayerStateChange
+               'onStateChange' : onPlayerStateChange
           }
         });
         function onPlayerStateChange(event){
              console.log(event);
-             console.log(miniVidScope);
         }
         function onPlayerReady(event) {
           console.log('PLAYER READY');
