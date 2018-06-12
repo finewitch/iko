@@ -1,11 +1,11 @@
 export function createPlayer(data){
-    var videoCont = document.getElementById("video-player")
-    var mainVid = videoCont.querySelector("#main-vid") 
+    var videoCont = document.getElementById('video-player')
+    var mainVid = videoCont.querySelector('#main-vid') 
     var linkPart = 'https://www.youtube.com/embed/'
     var id = data[0].contentDetails.videoId;
 
     if(data == undefined){
-        console.log('no video, error',);
+        console.log('no video, error');
     }else{
         createHeaders(data[0].snippet.title, data[0].snippet.description, data[0].snippet.publishedAt);
         mainVid.src = linkPart + id
@@ -33,7 +33,7 @@ function getData(el, container){
 function createVidObj(id, desc, container){
     var content = `<div class="vid-frame">
                         <div class="vid-frame-desc">${desc}</div>
-                        <iframe class="vidtape-vid" width="350" height="320" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe class="vidtape-vid" width="450" height="320" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>`
 
     container.innerHTML += content;
