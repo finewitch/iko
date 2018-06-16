@@ -14,17 +14,10 @@ export function createYT1(container, id){
        });
      
      function onPlayerReady(event) {
-         // console.log('PLAYER READY');
-         // event.target.playVideo();
+       //
        }
-     // console.log(player);
-     // mainVid.src = linkPart + id
-     
-     //pass first 3 after excluding main
 }
 export function createYTtapeVid(i, id, miniVidScope){
-     // scope['counter' + i] = 0;
-     // console.log(miniVidScope);
      miniVidScope['vid' + i] = new YT.Player('vid-' + i, {
           height: '430',
           width: '100%',
@@ -44,4 +37,33 @@ export function createYTtapeVid(i, id, miniVidScope){
           console.log('PLAYER READY');
           // event.target.playVideo();
         }
+}
+
+export function getBgVid(){
+  console.log('bg vid');
+  var myvid = document.getElementById('landing-wrapper-bg');
+  var BGvid = new YT.Player(myvid,  {
+      height: '600px',
+      width: '100%',
+      videoId: 'pVyzjaDzAqw',
+      playerVars: {
+        playlist: 'pVyzjaDzAqw',
+          // vq : hd1080,
+          autoplay: 1,
+          controls: 0, 
+          autohide: 1,
+          showinfo : 0,
+          rel:0,
+          loop: 1,
+      },
+      events: {
+        'onReady': onPlayerReady,
+      }
+    });
+
+ function onPlayerReady(event) {
+   console.log('PLAYER READY');
+   player.setPlaybackQuality('hd1080');
+   event.target.playVideo();
+ }
 }

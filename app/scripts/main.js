@@ -1,9 +1,21 @@
-console.log('\'Allo \'Allo!');
+
 import { getRecentYTVid } from './ajax/YTAjax'
 import { createPlayer } from './components/YTDom'
+import { getBgVid } from './components/YTapi'
 
-getRecentYTVid(passDataToPlayer);
 
-function passDataToPlayer(playerSource){
-    createPlayer(playerSource)
+window.onYouTubeIframeAPIReady = function () {
+
+    getBgVid();
+    
+    getRecentYTVid(passDataToPlayer);
+
+    function passDataToPlayer(playerSource){
+        createPlayer(playerSource)
+    }
 }
+   
+
+
+
+

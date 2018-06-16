@@ -1,4 +1,16 @@
 {% block content %}
+
+{% set postulat1 = "Tworzymy Ruch Oporu Przeciw Reprywatyzacji. Nie zamierzamy już oddać żadnej kamienicy. Zbierzemy 100 000 podpisów pod obywatelskim projektem ustawy o wygaśnięciu roszczeń reprywatyzacyjnych. Minęło już 70 lat od czasu, kiedy dzięki dekretowi o nacjonalizacji gruntów warszawskich odbudowaliśmy stolicę."
+%}
+
+{% set postulat2 = "W odpowiedzi na problem rosnących kosztów utrzymania w stolicy proponujemy, aby niepełnosprawni mieszkańcy o najniższych dochodach oraz ci, którzy otrzymują zbyt niskie emerytury dostawali od warszawskiego samorządu dodatek drożyźniany – czy jak kto woli warszawski­ w kwocie 300 zł miesięcznie. Wiele osób niepełnosprawnych, niezdolnych do pracy pobiera zasiłek stały w wysokości 604 zł miesięcznie, za które nie sposób się wyżywić i utrzymać najskromniejszego nawet mieszkania."
+%}
+
+{% set postulat3 = "Miasto utworzy program wspierania osób dotkniętych przejściowymi problemami z opłacaniem rat kredytu mieszkaniowego lub czynszu.Warszawa naszych marzeń nie będzie już nikogo eksmitować, bo ludziom, którzy gorzej sobie radzą należy się pomoc, a nie eksmisja. Skoro udaje się to w Berlinie, to jest możliwe także w Warszawie.
+"
+%}
+
+}
 <section>
     <div class="main-section">
         <h1 class="main-header">Piotr Ikonowicz dla Warszawy</h1>
@@ -7,16 +19,14 @@
                 <span>1</span>
                 <span class="sub">postulat</span>
             </div>
-            <p>Tworzymy Ruch Oporu Przeciw Reprywatyzacji. Nie zamierzamy już oddać żadnej kamienicy. Zbierzemy 100 000 podpisów pod obywatelskim projektem ustawy o wygaśnięciu roszczeń reprywatyzacyjnych. </p>
+            <p>{{ postulat1 }}</p>
         </div>
         <div class="num-container">
             <div class="number">
                 <span>2</span>
                 <span class="sub">postulat</span>
             </div>
-            <p>Dla wielu Warszawiaków Warszawa stała się już za droga. W odpowiedzi na rosnące koszty utrzymania w stolicy proponujemy, aby niepełnosprawni mieszkańcy o najniższych dochodach dostali od warszawskiego samorządu dodatek drożyźniany,
-                czy jak kto woli „warszawski” w kwocie 300 zł. miesięcznie. 
-            </p>
+            <p>{{postulat2}}</p>
         </div>
 
         <div class="num-container">
@@ -24,7 +34,7 @@
                 <span>3</span>
                 <span class="sub">postulat</span>
             </div>
-            <p> Warszawa, którą chcę stworzyć to miasto, z którego młodzież nie emigruje z powodu braku perspektyw na zdobycie mieszkania. W tym celu miasto wybuduje mieszkania komunalne z tanim czynszem, które będą mogły wynajmować młode osoby już przy pierwszym zatrudnieniu. </p>
+            <p>{{postulat3}}</p>
         </div>
     </div>
 </section>

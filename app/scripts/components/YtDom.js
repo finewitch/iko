@@ -1,4 +1,4 @@
-import { createYT1, createYTtapeVid } from "./YTapi";
+import { createYT1, createYTtapeVid } from './YTapi';
 
 export function createPlayer(data){
 
@@ -31,7 +31,7 @@ function createVidTape(mostRecent){
     mostRecent.forEach((el, i)=>{
         createVidObj(el, container, i, miniVidScope)
     })
-    console.log(miniVidScope);
+    // console.log(miniVidScope);
 
 }
 function createVidObj(el, container, i, miniVidScope){

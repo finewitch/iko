@@ -4,6 +4,17 @@ footer{
         margin:0 auto;
         .footer-contact{
             padding-left:40px;
+            a{
+                transition: .5s all;
+                &:hover{
+                    opacity:.6;
+                    transition: .5s all;
+                }
+                &:hover{
+                    opacity:.6;
+                    transition: .5s all;
+                }
+            }
         }
         &-footer{
             display: flex;
@@ -48,12 +59,13 @@ footer{
                 font-size:15px;
                 width:100%;
                 display: block;
-                font-weight: bold;
+                // font-weight: bold;
                 letter-spacing: 1px;
                 text-align: center;
             }
             span.name{
                 letter-spacing: 7px;
+                margin-left:3px;
             }
         }
         .main-links{
