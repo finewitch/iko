@@ -6,8 +6,9 @@
 @import 'core/nav';
 @import 'core/footer';
 @import 'parts/popup-volunteer';
-//componants
+//components
 @import 'components/recentVideos';
+@import 'components/slick';
 
 html,body{
     height: 100%;

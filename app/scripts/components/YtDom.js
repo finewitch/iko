@@ -16,7 +16,7 @@ import { createYT1, createYTtapeVid } from './YTapi';
 //         createHeaders(data[0].snippet.title, data[0].snippet.description, data[0].snippet.publishedAt);
 
 //         createYT1(videoCont, id);
-       
+
 //         createVidTape(data.slice(1,4));
 
 //     }
@@ -46,7 +46,7 @@ import { createYT1, createYTtapeVid } from './YTapi';
 //                     ${desc}</div>
 //                     <div id="vid-${i}"></div>
 //                     </div>`
-    
+
 //     container.innerHTML += content;
 
 //     createYTtapeVid(i, id, miniVidScope)
@@ -70,23 +70,43 @@ import { createYT1, createYTtapeVid } from './YTapi';
 //     headers.querySelector('.vidrec-desc').innerText = desc;
 // }
 
-export function createVidTape(playerSource){
-
-    playerSource.forEach((el)=>{
+export function createVidTape(playerSource) {
+    console.log('player');
+    var container = document.querySelector('.vid-tape')
+    playerSource.forEach((el, i) => {
         var id = el.contentDetails.videoId;
 
-        createOwlPart(id)
+        createTapePart(id, container, i)
 
     })
 }
-function createOwlPart(id){
-    var container = document.querySelector('.owl-carousel');
-    var item = `<div class="item-video">
-                    <a class="owl-video" href='https://www.youtube.com/watch?v=${id}'></a>
-                </div>`
+function createTapePart(id, container, i) {
+    console.log(i);
+    var item = `
+    <div><div id="vid-${i}"></div></div>`
+    container.innerHTML += item;
+    // console.log(container);
+    var vid = new YT.Player('vid-' + i, {
+        height: '600px',
+        width: '100%',
+        videoId: 'pVyzjaDzAqw',
+        playerVars: {
+            playlist: 'pVyzjaDzAqw',
+            // mute: 1,
+            // autoplay: 1,
+            controls: 0,
+            autohide: 1,
+            showinfo: 0,
+            rel: 0,
+            loop: 1,
+            'origin': 'http://localhost:9000'
+        },
+        events: {
+            // 'onReady': onPlayerReady,
+            // 'onStateChange': onPlayerStateChange,
+            // 'onError': onPlayerError
+        }
+    });
 
-    
-    // container.innerHTML += item;
-    $('.owl-carousel').owlCarousel('add', item).owlCarousel('refresh')
-    
+
 }
