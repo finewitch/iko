@@ -27,7 +27,7 @@ export function createYTtapeVid(i, id, miniVidScope){
           },
           events: {
             'onReady': onPlayerReady,
-               'onStateChange' : onPlayerStateChange
+            'onStateChange' : onPlayerStateChange
           }
         });
         function onPlayerStateChange(event){
@@ -58,12 +58,25 @@ export function getBgVid(){
       },
       events: {
         'onReady': onPlayerReady,
+        'onStateChange' : onPlayerStateChange,
+        'onError': onPlayerError
       }
     });
 
+  function onPlayerError(event) {
+    console.log(event);
+  }
+
  function onPlayerReady(event) {
    console.log('PLAYER READY');
-   player.setPlaybackQuality('hd1080');
+   event.target.setPlaybackQuality('hd1080');
    event.target.playVideo();
  }
+
+ function onPlayerStateChange(event) {
+   console.log(event);
+  // console.log('PLAYER READY');
+  // player.setPlaybackQuality('hd1080');
+  // event.target.playVideo();
+}
 }
