@@ -13,15 +13,17 @@ window.onYouTubeIframeAPIReady = function (event) {
         //     // createPlayer(playerSource)
         $(document).ready(function () {
             $('.vid-tape').slick({
-
-                slidesToScroll: 3,
+                slidesToShow:1,
+                slidesToScroll: 1,
+                arrows: true,
                 centerMode: true,
-                centerPadding: '60px',
+                centerPadding: '100px',
                 lazyLoad: 'progressive',
-                speed: 600,
-                arrows: false,
+                speed: 1300,
                 dots: true,
-                cssEase: 'cubic-bezier(0.87, 0.03, 0.41, 0.9)'
+                // prevArrow: $('.prev'),
+                // nextArrow: $('.next'),
+                // cssEase: 'cubic-bezier(0.87, 0.03, 0.41, 0.9)'
             });
         });
     }

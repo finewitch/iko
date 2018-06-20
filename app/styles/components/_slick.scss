@@ -1,10 +1,24 @@
 .slick{
     &-track{
     height:500px;
-    border:1px solid black;
+    // border:1px solid black;
     }
     &-slide{
-        border:2px dotted blue;
+        // border:2px dotted blue;
     }
-
+    
 }
+ul.slick-dots{
+    margin-bottom:-20px;
+}
+.slick-dots li{
+    margin: 15px 15px 0 0;
+    button:before{
+        font-size:15px;
+    }
+}
+.slick-center {
+}
+// .slick-slide {
+//     margin: 0 10px;
+// }
