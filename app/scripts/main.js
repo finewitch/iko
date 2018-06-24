@@ -1,6 +1,5 @@
-
 import { getRecentYTVid } from './ajax/YTAjax'
-import { createPlayer, createVidTape } from './components/YTDom'
+import { createVidTape } from './components/YTDom'
 import { getBgVid } from './components/YTapi'
 
 window.onYouTubeIframeAPIReady = function (event) {
@@ -9,22 +8,23 @@ window.onYouTubeIframeAPIReady = function (event) {
     getRecentYTVid(passDataToPlayer);
 
     function passDataToPlayer(playerSource) {
+
         createVidTape(playerSource);
-        //     // createPlayer(playerSource)
+        
         $(document).ready(function () {
+            $('.vid-tape').on('init', function (slick) {
+                console.log('started', slick);
+            });
             $('.vid-tape').slick({
                 slidesToShow:1,
-                slidesToScroll: 1,
+                // slidesToScroll: 1,
                 arrows: true,
+                infinite: true,
                 centerMode: true,
-                centerPadding: '100px',
-                lazyLoad: 'progressive',
-                speed: 1300,
                 dots: true,
-                // prevArrow: $('.prev'),
-                // nextArrow: $('.next'),
-                // cssEase: 'cubic-bezier(0.87, 0.03, 0.41, 0.9)'
-            });
+                swipeToSlide: true,
+                variableWidth: true,
+            })
         });
     }
 }

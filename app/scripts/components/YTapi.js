@@ -1,43 +1,43 @@
-export function createYT1(container, id) {
-  var YT1;
-  YT1 = new YT.Player(container, {
-    height: '600',
-    width: '100%',
-    videoId: id,
-    playerVars: {
-      showinfo: '0',
-      rel: '0'
-    },
-    events: {
-      'onReady': onPlayerReady
-    }
-  });
+// export function createYT1(container, id) {
+//   var YT1;
+//   YT1 = new YT.Player(container, {
+//     height: '600',
+//     width: '100%',
+//     videoId: id,
+//     playerVars: {
+//       showinfo: '0',
+//       rel: '0'
+//     },
+//     events: {
+//       'onReady': onPlayerReady
+//     }
+//   });
 
-  function onPlayerReady(event) {
-    //
-  }
-}
-export function createYTtapeVid(i, id, miniVidScope) {
-  miniVidScope['vid' + i] = new YT.Player('vid-' + i, {
-    height: '430',
-    width: '100%',
-    videoId: id,
-    playerVars: {
-      showinfo: '0',
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-  function onPlayerStateChange(event) {
-    console.log(event);
-  }
-  function onPlayerReady(event) {
-    console.log('PLAYER READY');
-    // event.target.playVideo();
-  }
-}
+//   function onPlayerReady(event) {
+//     //
+//   }
+// }
+// export function createYTtapeVid(i, id, miniVidScope) {
+//   miniVidScope['vid' + i] = new YT.Player('vid-' + i, {
+//     height: '430',
+//     width: '100%',
+//     videoId: id,
+//     playerVars: {
+//       showinfo: '0',
+//     },
+//     events: {
+//       'onReady': onPlayerReady,
+//       'onStateChange': onPlayerStateChange
+//     }
+//   });
+//   function onPlayerStateChange(event) {
+//     console.log(event);
+//   }
+//   function onPlayerReady(event) {
+//     console.log('PLAYER READY');
+//     // event.target.playVideo();
+//   }
+// }
 
 export function getBgVid() {
   console.log('bg vid');
@@ -55,7 +55,6 @@ export function getBgVid() {
       showinfo: 0,
       rel: 0,
       loop: 1,
-      'origin': 'http://localhost:9000'
     },
     events: {
       'onReady': onPlayerReady,

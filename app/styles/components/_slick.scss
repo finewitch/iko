@@ -1,10 +1,24 @@
 .slick{
     &-track{
     height:500px;
-    // border:1px solid black;
     }
     &-slide{
-        // border:2px dotted blue;
+        backface-visibility: hidden;
+        width:1200px;
+        background: black;
+        img{
+            margin:0 auto;
+            height:670px;
+            margin-top:-85px;
+            // width:100%;
+            // display: none;
+        }
+        .vid-info{
+            color:red!important;
+            display: inline;
+            opacity:1;
+            border:1px solid red;
+        }
     }
     
 }
@@ -19,6 +33,23 @@ ul.slick-dots{
 }
 .slick-center {
 }
-// .slick-slide {
-//     margin: 0 10px;
-// }
+.slick-arrow{
+    z-index:11111;
+}
+.slick-next{
+    right:100px;
+}
+.slick-prev{
+    left:100px;
+}
+.slick-next:before{
+    content: '›';
+}
+.slick-prev:before{
+    content: '‹';
+}
+.slick-prev:before, .slick-next:before{
+    font-size:120px;
+    color: $main-red;
+    line-height:0;
+}
