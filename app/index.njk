@@ -6,12 +6,11 @@
 {% include "utils/popup-join.njk" %}
     <main>
         <div class="landing-wrapper">
-            <div class="landing-wrapper-mainpic">
-                <div id="landing-wrapper-bg"></div>
-                {# <img src='images/lg2.jpg'> #}
+            <div class="landing-wrapper-mainpic embed-responsive embed-responsive-16by9">
+                <div id="landing-wrapper-bg" class=""></div>
             </div>
-            <div class="landing-wrapper presidentpdf main-program">
-                <div class="landing-wrapper presidentpdf-btngroup col-lg-12 row">
+            <div class="presidentpdf main-program">
+                <div class="presidentpdf-btngroup col-lg-12 row">
                     <button class="btn-basic border-white"  data-toggle="modal" data-target="#volunteer">
                         <img src='images/icons/volunter.svg'>Wolontariat
                     </button>
@@ -33,7 +32,6 @@
         {% include "components/personProgram.njk" %}
 
         {# RECENT VIDEOS #}
-        {# {% include "components/recentVideos.njk" %} #}
         {% include "components/recentVideosyt.njk" %}
         {# RECENT VIDEOS end-- #}
        

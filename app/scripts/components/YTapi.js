@@ -45,9 +45,9 @@ export function getBgVid() {
   var BGvid = new YT.Player(myvid, {
     height: '600px',
     width: '100%',
-    videoId: 'pVyzjaDzAqw',
+    videoId: 'zHQrcUK3QoA',
     playerVars: {
-      playlist: 'pVyzjaDzAqw',
+      playlist: 'zHQrcUK3QoA',
       mute: 1,
       autoplay: 1,
       controls: 0,

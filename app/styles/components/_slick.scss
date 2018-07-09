@@ -1,18 +1,11 @@
 .slick{
     &-track{
-    height:500px;
+    height:450px;
     }
     &-slide{
         backface-visibility: hidden;
         width:1200px;
         background: black;
-        img{
-            margin:0 auto;
-            height:670px;
-            margin-top:-85px;
-            // width:100%;
-            // display: none;
-        }
         .vid-info{
             color:red!important;
             display: inline;

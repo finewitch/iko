@@ -36,7 +36,7 @@ function createVid1(){
         var divId = videos[i].id;
 
         videos[i] = new YT.Player(divId, {
-            height: '100%',
+            height: '450px',
             width: '100%',
             videoId: divId,
             playerVars: {       
