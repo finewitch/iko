@@ -1,21 +1,35 @@
 
-export function createVid1(playerSource){
+export function createVidTape(playerSource){
     var vidIds = []
+    var dates = []
     playerSource.forEach((el, i) => {
         var id = el.contentDetails.videoId;
-        vidIds.push(id)
+        var desc = el.snippet.description;
+        var date = el.snippet.publishedAt;
+        var obj= {}
+        obj[id] = desc;
+        vidIds.push(obj)
+        dates.push(date)
 
     })
+    console.log(vidIds);
     var videos = Array.from(document.querySelectorAll('.swiper-slide .vid'));
-
+    
+    var descCont = Array.from(document.querySelectorAll('.swiper-slide p'));
+    var dateCont = Array.from(document.querySelectorAll('.swiper-slide span'));
+    // console.log(moment.duration('PT15M33S').asMilliseconds(););
     for(var i = 0; i < videos.length; i++){
+        var key = Object.keys(vidIds[i])
+
+        descCont[i].innerHTML = vidIds[i][key]
+        dateCont[i].innerHTML = dates[i].split("T")[0]
 
         var divId = videos[i].id;
 
         videos[i] = new YT.Player(divId, {
             height: '500px',
             width: '100%',
-            videoId: vidIds[i],
+            videoId: Object.keys(vidIds[i])[0],
             playerVars: {       
                 enablejsapi: 0,
                 controls: 0,

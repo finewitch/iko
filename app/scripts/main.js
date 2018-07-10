@@ -1,15 +1,16 @@
 import { getRecentYTVid } from './ajax/YTAjax'
-import { createVid1 } from './components/YTDom'
+import { createVidTape } from './components/YTDom'
 import { getBgVid } from './components/YTapi'
 
 window.onYouTubeIframeAPIReady = function (event) {
-    window.clicked=false;
+    // window.clicked=false;
     getBgVid();
 
     getRecentYTVid(passDataToPlayer);
 
     function passDataToPlayer(playerSource) {
-        createVid1(playerSource);
+        console.log(playerSource);
+        createVidTape(playerSource);
             }
         }
         var swiper = new Swiper('.swiper-container', {
@@ -27,7 +28,6 @@ window.onYouTubeIframeAPIReady = function (event) {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            // loop:true,
         });
         
         
