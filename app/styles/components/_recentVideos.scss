@@ -11,3 +11,20 @@
         margin-bottom:60px;
     }
 }
+
+@media only screen and (max-width: $small-laptop) {
+    .videolist-recent{
+        h2{
+            margin-bottom:40px;
+        }
+    }
+    .swiper-slide{
+        p{
+            font-size:1.1rem;
+            line-height:29px;
+        }
+        .desc{
+            // height:320px!important;
+        }
+    }
+}
