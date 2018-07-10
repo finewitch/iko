@@ -1,35 +1,12 @@
 
-export function createVidTape(playerSource) {
-
-    window.vid = [];
-
-    var container = document.querySelector('.vid-tape')
+export function createVid1(playerSource){
+    var vidIds = []
     playerSource.forEach((el, i) => {
-        
         var id = el.contentDetails.videoId;
-        var url = el.snippet.thumbnails.standard.url;
+        vidIds.push(id)
 
-        createHolders(id, container);
-        
     })
-    createVid1();
-}
-function createHolders(id, container){
-    
-    var item = `
-    <div>
-        <div>
-            <div id="${id}" class="vid"></div>
-        </div>
-    </div>
-    `
-
-    container.innerHTML += item;
-
-}
-function createVid1(){
-
-    var videos = Array.from(document.querySelectorAll('.vid-tape .vid'));
+    var videos = Array.from(document.querySelectorAll('.swiper-slide .vid'));
 
     for(var i = 0; i < videos.length; i++){
 
@@ -38,7 +15,7 @@ function createVid1(){
         videos[i] = new YT.Player(divId, {
             height: '500px',
             width: '100%',
-            videoId: divId,
+            videoId: vidIds[i],
             playerVars: {       
                 enablejsapi: 0,
                 controls: 0,
