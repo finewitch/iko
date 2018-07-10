@@ -5,24 +5,14 @@
 }
 .landing-wrapper {
     // position: relative;
-    height:calc(100vh - 70px);
-    border: 2px solid greenyellow;
+    height:100%;
     &-mainpic {
         position: relative;
         padding-bottom: 44.25%; /* 16:9 */
         pointer-events: none;
-        border:2px solid red;
-        // max-height: 50%;
+        // border:2px solid red;
         height: 0;
         margin-top:-70px;
-        iframe#landing-wrapper-bg{
-            // position: absolute;
-            // // display: none;
-            // top: -100px;
-            // left: 0;
-            // width: 150%;
-            // height: 100%;
-        }
         img {
             width: 100%;
         }
@@ -34,8 +24,9 @@
     width:100%;
     padding-top: 15px;
     background: $main_red;
-    height: 515px;
-    border:5px solid black;
+    // height: 515px;
+    padding-bottom:50px;
+    // border:5px solid black;
     // display: none;
     margin-top:-70px;
     h1{
@@ -47,7 +38,7 @@
         left: 0;
         right: 0;
         top: -100px;
-        background: $main_red;
+        background: #C50037;
         display: flex;
         button {
             flex: 1;

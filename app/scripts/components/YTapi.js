@@ -55,18 +55,26 @@ export function getBgVid() {
       showinfo: 0,
       rel: 0,
       loop: 1,
+      suggestedQuality: 'hd720',
     },
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange,
-      'onError': onPlayerError
+      'onError': onPlayerError,
+      'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
     }
   });
 
   function onPlayerError(event) {
     console.log(event);
   }
+  function onPlayerPlaybackQualityChange(event){
+    console.log(event);
+    if (event.data == YT.PlayerState.BUFFERING) {
+      event.target.setPlaybackQuality('hd720');
+    }
 
+  }
   function onPlayerReady(event) {
     console.log('PLAYER READY');
     event.target.setPlaybackQuality('hd1080');
@@ -76,8 +84,12 @@ export function getBgVid() {
 
   function onPlayerStateChange(event) {
     console.log(event);
+    if (event.data == YT.PlayerState.BUFFERING) {
+      event.target.setPlaybackQuality('hd720');
+    }
     BGvid.playVideo();
     event.target.playVideo();
+
     // console.log('PLAYER READY');
     // player.setPlaybackQuality('hd1080');
     // event.target.playVideo();

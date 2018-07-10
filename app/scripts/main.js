@@ -9,23 +9,23 @@ window.onYouTubeIframeAPIReady = function (event) {
 
     function passDataToPlayer(playerSource) {
 
-        createVidTape(playerSource);
+        // createVidTape(playerSource);
         
-        $(document).ready(function () {
-            $('.vid-tape').on('init', function (slick) {
-                console.log('started', slick);
-            });
-            $('.vid-tape').slick({
-                slidesToShow:1,
-                // slidesToScroll: 1,
-                arrows: true,
-                infinite: true,
-                centerMode: true,
-                dots: true,
-                swipeToSlide: true,
-                variableWidth: true,
-            })
-        });
+        // $(document).ready(function () {
+        //     $('.vid-tape').on('init', function (slick) {
+        //         console.log('started', slick);
+        //     });
+        //     $('.vid-tape').slick({
+        //         slidesToShow:1,
+        //         // slidesToScroll: 1,
+        //         arrows: true,
+        //         infinite: true,
+        //         centerMode: true,
+        //         dots: true,
+        //         swipeToSlide: true,
+        //         variableWidth: true,
+        //     })
+        // });
     }
 }
 
