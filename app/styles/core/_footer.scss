@@ -23,13 +23,14 @@ footer{
             width:80%;
             &-group{
                 width:300px;
-                padding: 130px 20px 0px 20px;
+                padding: 115px 20px 0px 20px;
                 span{
                     color: $gray;
                     line-height: 28px;
                     p{
                         text-transform: none;
                         color: $gray;
+                        margin:5px 0 5px 0;
                     }
                     img{
                         width:35px;

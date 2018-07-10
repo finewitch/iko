@@ -82,6 +82,13 @@ a.a-basic{
             text-transform: uppercase;
             cursor: pointer;
         }
+        .account{
+            border:1px solid red;
+            padding:10px;
+            color:$main-red;
+            font-weight:400;
+            text-align: center;
+        }
         p{
             font-size:1em;
             color: $black;
@@ -127,6 +134,8 @@ a.a-basic{
             }
             button.close{
                 opacity:1;
+                margin-top:0;
+                margin-right:0;
             }
         }
     }
