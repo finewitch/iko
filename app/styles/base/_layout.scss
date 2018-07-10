@@ -2,17 +2,18 @@
     // border:10px solid black;
     // margin-top:-475px;
     padding-top:50px!important;
+    margin-top:-250px;
 }
 .landing-wrapper {
     // position: relative;
     height:100%;
     &-mainpic {
         position: relative;
-        padding-bottom: 44.25%; /* 16:9 */
+        // padding-bottom: 44.25%; /* 16:9 */
         pointer-events: none;
         // border:2px solid red;
-        height: 0;
-        margin-top:-70px;
+        height: 70%;
+        margin-top:-150px;
         img {
             width: 100%;
         }
@@ -28,7 +29,7 @@
     padding-bottom:50px;
     // border:5px solid black;
     // display: none;
-    margin-top:-70px;
+    // margin-top:-250px;
     h1{
         margin-top:20px;
     }
