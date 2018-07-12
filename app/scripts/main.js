@@ -20,6 +20,10 @@ window.onYouTubeIframeAPIReady = function (event) {
             // slidesPerGroup: 1,
             // loop: true,
             // loopFillGroupWithBlank: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,

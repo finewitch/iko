@@ -50,10 +50,11 @@
   .swiper-pagination{
       margin: 0 auto;
       width:100%;
+      position: relative!important;
       span{
           margin-right:15px;
-          width:10px;
-          height:10px;
+          width:15px;
+          height:15px;
           margin-top:20px;
           background:red;
           &:focus{

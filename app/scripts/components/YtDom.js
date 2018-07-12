@@ -19,10 +19,14 @@ export function createVidTape(playerSource){
     var dateCont = Array.from(document.querySelectorAll('.swiper-slide span'));
     // console.log(moment.duration('PT15M33S').asMilliseconds(););
     for(var i = 0; i < videos.length; i++){
+        if(vidIds[i] ===  undefined){
+            return;
+        }
+        // console.log(vidIds[i]);
         var key = Object.keys(vidIds[i])
 
         descCont[i].innerHTML = vidIds[i][key]
-        dateCont[i].innerHTML = dates[i].split("T")[0]
+        dateCont[i].innerHTML = dates[i].split('T')[0]
 
         var divId = videos[i].id;
 

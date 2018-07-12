@@ -12,10 +12,37 @@
     }
 }
 
+@media only screen and (max-width: $laptop) {
+    .videolist-recent{
+        padding:0;
+        h2{
+            margin-bottom:20px;
+            margin-top:40px;
+            margin-bottom:20px;
+        }
+        .swiper-container{
+            height:550px;
+            // width:90%;
+            .swiper-slide{
+                // width:790px!important;
+                .desc{
+                    margin:30px 0;
+                }
+                p{
+                    font-size:.95rem;
+                    line-height:25px;
+                }
+                span{
+                    padding-top:10px;
+                }
+            }
+        }
+    }
+}
 @media only screen and (max-width: $small-laptop) {
     .videolist-recent{
         h2{
-            margin-bottom:40px;
+            margin-bottom:20px;
         }
     }
     .swiper-slide{
