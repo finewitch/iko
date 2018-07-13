@@ -4,6 +4,12 @@
     padding-top:50px!important;
     margin-top:-430px;
 }
+.grid-container{
+    max-width:$main-width;
+    // display: flex;
+    // align-items: center;
+    margin:0 auto;
+}
 .landing-wrapper {
     // position: relative;
     height:100%;
@@ -13,7 +19,9 @@
             width: 100%;
         }
         iframe{
-            position:absolute;top:0;left:0;width:100%;height:100%;
+            position:absolute;top:0;left:0;
+            max-width:100%;
+            height:100%;
             pointer-events: none;
         }
     }
@@ -26,7 +34,7 @@
     background: $main_red;
     padding-bottom:50px;
     h1{
-        margin-top:20px;
+        margin: 30px 0;
     }
     &-btngroup {
         padding: 10px;
@@ -76,7 +84,7 @@ section {
         color: $main_red;
         text-align: center;
         margin:0px;
-        margin-bottom:50px;
+        margin-bottom:30px;
     }
     div.num-container {
         position: relative;
@@ -129,7 +137,7 @@ section {
 @media only screen and (max-width: $laptop) {
     .main-program{
         // border:50px solid blue;
-        margin-top:-200px;
+        margin-top:-20px;
     }
     .landing-wrapper-mainpic{
         margin-top:-89px;

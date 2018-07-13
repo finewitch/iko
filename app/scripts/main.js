@@ -1,6 +1,7 @@
 import { getRecentYTVid } from './ajax/YTAjax'
 import { createVidTape } from './components/YTDom'
 import { getBgVid } from './components/YTapi'
+import { scrollIntoView } from './jsUtils'
 
 window.onYouTubeIframeAPIReady = function (event) {
     // window.clicked=false;
@@ -9,12 +10,12 @@ window.onYouTubeIframeAPIReady = function (event) {
     getRecentYTVid(passDataToPlayer);
 
     function passDataToPlayer(playerSource) {
-        console.log(playerSource);
+        // console.log(playerSource);
         createVidTape(playerSource);
             }
         }
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1.5,
+            slidesPerView: 1.7,
             centeredSlides: true,
             spaceBetween: 50,
             // slidesPerGroup: 1,
@@ -34,6 +35,7 @@ window.onYouTubeIframeAPIReady = function (event) {
             },
         });
         
+scrollIntoView('contact')
         
         
         

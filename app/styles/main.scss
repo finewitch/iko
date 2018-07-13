@@ -9,6 +9,8 @@
 //components
 @import 'components/recentVideos';
 @import 'components/swiper';
+//pages
+@import 'components/underconst';
 
 html,body{
     height: 100%;
@@ -39,7 +41,7 @@ main {
 }
 footer{
     background: $black;
-    height:400px;
+    height:500px;
     width:100%;
     box-shadow: -1px -5px 30px -13px rgba(61,61,61,1);
 }
