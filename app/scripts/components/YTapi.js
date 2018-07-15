@@ -55,7 +55,7 @@ export function getBgVid() {
       showinfo: 0,
       rel: 0,
       loop: 1,
-      suggestedQuality: 'hd720',
+      suggestedQuality: 'hd1080',
     },
     events: {
       'onReady': onPlayerReady,
@@ -71,7 +71,7 @@ export function getBgVid() {
   function onPlayerPlaybackQualityChange(event){
     console.log(event);
     if (event.data == YT.PlayerState.BUFFERING) {
-      event.target.setPlaybackQuality('hd720');
+      event.target.setPlaybackQuality('hd1080');
     }
 
   }
@@ -85,7 +85,7 @@ export function getBgVid() {
   function onPlayerStateChange(event) {
     console.log(event);
     if (event.data == YT.PlayerState.BUFFERING) {
-      event.target.setPlaybackQuality('hd720');
+      event.target.setPlaybackQuality('hd1080');
     }
     BGvid.playVideo();
     event.target.playVideo();

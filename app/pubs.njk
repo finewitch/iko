@@ -1,0 +1,22 @@
+
+
+{% extends "layouts/default.njk" %}
+	{% block content %}
+		<div class="pubs grid-container">
+			<div class="pubs-cont">
+				{% include "modules/pubs-singleshort1.njk" %}
+				<a class="pubs-cont-readmore" href="pubs-single1.html">czytaj całość</a>
+			</div>
+
+			<div class="pubs-cont">
+				{% include "modules/pubs-singleshort2.njk" %}
+				<a class="pubs-cont-readmore" href="pubs-single2.html">czytaj całość</a>
+			</div>
+
+			<div class="pubs-cont">
+				{% include "modules/pubs-singleshort3.njk" %}
+				<a class="pubs-cont-readmore" href="pubs-single3.html">czytaj całość</a>
+			</div>
+
+		</div>
+	{% endblock %}

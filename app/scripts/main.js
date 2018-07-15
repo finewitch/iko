@@ -5,7 +5,7 @@ import { scrollIntoView } from './jsUtils'
 
 window.onYouTubeIframeAPIReady = function (event) {
     // window.clicked=false;
-    getBgVid();
+    // getBgVid();
 
     getRecentYTVid(passDataToPlayer);
 

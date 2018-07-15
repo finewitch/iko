@@ -10,19 +10,26 @@
     // align-items: center;
     margin:0 auto;
 }
-.landing-wrapper {
-    // position: relative;
-    height:100%;
-    &-mainpic {
-        position:relative;padding-top:56.25%;
-        img {
-            width: 100%;
-        }
-        iframe{
-            position:absolute;top:0;left:0;
-            max-width:100%;
+main{
+    .landing-wrapper {
+        // height:100%;
+        // position: relative;
+        // height:500px;
+        &-mainpic {
+            position:relative;padding-top:56.25%;
             height:100%;
-            pointer-events: none;
+            height:500px;
+            iframe{
+            }
+            img {
+                width: 100%;
+            }
+            // iframe{
+            //     position:absolute;top:0;left:0;
+            //     max-width:100%;
+            //     height:100%;
+            //     pointer-events: none;
+            // }
         }
     }
 }
