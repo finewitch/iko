@@ -1,6 +1,6 @@
 .pubs{
     //  height:auto
-     padding: 70px 0;
+     padding: 70px 0 100px 0;
      &-cont{
           border:1px solid lightgray;
           border-top:2px solid $main_red;
@@ -73,7 +73,11 @@
             padding-right: 10px;
             padding-left: 3px;
         }
-     }
+      }
+        a{
+          margin-left:50px;
+          margin: 50px 0 0 50px;
+        }
     }
 }
 
@@ -81,7 +85,7 @@
 @media only screen and (max-width: $laptop) {
   .pubs{
     //  height:auto
-     padding: 70px 0;
+     padding: 50px 0;
      &-cont{
        margin-top:40px;
      }
@@ -93,5 +97,13 @@
           margin-top:70px;
      }
 
+}
+.pubs-single{
+  margin:200px auto 100px auto;
+  padding: 50px 0;
+  display: flex;
+  h2{
+    font-size:4rem;
+  }
 }
 }
