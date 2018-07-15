@@ -2,6 +2,12 @@
 header{
     height: 70px;
     nav{
+        .mobile-show-btn{
+            display: none;
+        }
+        .main-navigation-mobile-show{
+            display: none;
+        }
         .grid-container{
             max-width:$main-width;
             display: flex;
@@ -71,5 +77,47 @@ header{
             }
         }
     }
+}
+
+
+@media only screen and (max-width: $phone) {
+    nav{
+        width:100vw!important;
+    }
+    .grid-container{
+        max-width:auto;
+        .main-navigation{
+            display: none!important;
+        }
+    }
+    .hamburger{
+        display: block!important;
+        z-index: 11;
+    }
+    .open{
+        display: flex!important;
+        opacity:1!important;
+    }
+    .main-navigation-mobile-show{
+        border:2px solid red;
+        border-style:none none solid none;
+        position: absolute;
+        height:500px;
+        background: white;
+        width:100vw;
+        top:70px;
+        opacity:0;
+        flex-direction: column;
+        align-items:center;
+        padding-top:50px;
+        z-index:111;
+        a{
+            text-transform: uppercase;
+            padding:20px;
+        }
+    }
+    // .mobile-show{
+    //     display: none;
+    // }
 }
 

@@ -36,7 +36,17 @@ window.onYouTubeIframeAPIReady = function (event) {
         });
         
 scrollIntoView('contact')
-        
+ var btn = document.querySelector('.hamburger')
+ btn.addEventListener('click', function(){
+     this.classList.toggle('is-active')
+     var hamburgerMenu = document.getElementById('mobile-menu');
+     if (this.classList.contains('is-active')){
+         hamburgerMenu.classList.add('open')
+     }else{
+        hamburgerMenu.classList.remove('open')
+     }
+ })
+
         
         
         

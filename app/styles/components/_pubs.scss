@@ -107,3 +107,22 @@
   }
 }
 }
+@media only screen and (max-width: $phone) {
+  .pubs-single{
+    flex-direction: column;
+    margin-top:50px;
+    h2{
+      text-align:center;
+      padding-right:0;
+      font-size:3rem;
+    }
+  }
+  .pubs-single-content{
+    margin-top:0;
+    p{
+      font-size:1rem;
+      line-height:28px;
+    }
+  }
+
+}
