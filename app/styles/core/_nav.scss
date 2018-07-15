@@ -2,6 +2,9 @@
 header{
     height: 70px;
     nav{
+        #hamburger-1{
+            display: none;
+        }
         .mobile-show-btn{
             display: none;
         }
@@ -81,6 +84,9 @@ header{
 
 
 @media only screen and (max-width: $phone) {
+    #hamburger-1{
+        display: block;
+    }
     nav{
         width:100vw!important;
     }
