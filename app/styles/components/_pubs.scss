@@ -112,6 +112,11 @@
 }
 }
 @media only screen and (max-width: $phone) {
+  .pubs{
+    &-cont{
+      margin:0 auto;
+    }
+  }
   .pubs-single{
     flex-direction: column;
     margin-top:50px;

@@ -65,3 +65,11 @@
           }
       }
   }
+@media only screen and (max-width: $phone) {
+    .swiper-slide{
+        // display: block!important;
+        .desc{
+            border:none
+        }
+    }
+}
