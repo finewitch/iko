@@ -1,7 +1,27 @@
 .videolist-recent{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top:30px;
     width:100%;
+    .yt-channel-btn{
+        border:1px solid red;
+        text-align:center;
+        margin: 0 auto;
+        display: block;
+        max-width:350px;
+        padding: 16px 40px;
+        margin-top:40px;
+        border-radius:5px;
+        background: $main-red;
+        color:white;
+        font-size:1.2rem;
+        white-space: nowrap;
+        transition: .5s all;
+        &:hover{
+            text-decoration: none;
+            opacity:0.6;
+            transition: .5s all;
+        }
+    }
     .swiper-slide{
         iframe{
             max-width: 900px;
