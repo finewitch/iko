@@ -1,6 +1,6 @@
 .mainVid{
      // border:1px solid red;
-     padding-top:120px;
+     padding:120px 30px;
      margin: 0 auto;
      display: flex;
      justify-content: space-between;
@@ -35,6 +35,7 @@
      .mainVid{
           padding-left:30px;
           padding-top:90px;
+          padding-bottom:60px;
           h3{
                font-size:2.7rem;
           }

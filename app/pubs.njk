@@ -1,27 +1,58 @@
 
+{% set artShorts = [
+    {
+        name: 'Pieniądze są dla frajerów',
+		num: 1,
+        desc: 'Większość swojego czasu spędzam na obcowaniu z innymi ludźmi. Na pracy społecznej. Z punktu widzenia kapitalizmu zachowuję się nieracjonalnie. Nie pożądam jednak dóbr materialnych. Wolę raczej przeżywać głęboko każdą minutę swojego życia. Chcę, żeby miało ono znaczenie. Życie samo w sobie wydaje mi się niesamowitym darem, szaleńczą, zawrotną przygodą. A przygody tylko wtedy mają sens i smak, gdy się je przeżywa z innymi.'
+    },
+	{
+		name: 'Stracim robotę bo rektor kupił Toyotę',
+		num: 5,
+		desc: 'Bo było coś perwersyjnego w tym, że rektor Uniwersytetu Marii Curie Skłodowskiej w Lublinie ogłaszał, że ma zamiar zwolnic 400 osób z obsługi technicznej i w tym samym czasie zakupił luksusowe auto służbowe za 100 tys. zł do wożenia swej prześwietnej osoby. Oczywiście większego wpływu na robotę ludzi to pewnie nie miało, ale nadawało się idealnie na egzemplifikację ogólnej pogardy, z jaką elity traktują zwykłych ludzi od pracy fizycznej.'
+	},
+	{
+		name: 'Nie oddawać Polski w naturze',
+		num: 6,
+		desc: 'Przyszła do mnie starsza pani. Właściciel zreprywatyzowanej kamienicy żąda od niej 1700 zł czynszu, a ona ma tylko 1600 zł. emerytury.  Takich krzywdzonych na co dzień ludzi, rodzin są dziesiątki tysięcy, a będzie ich przybywać jeżeli nadal będą oddawane domy z lokatorami.'
+	},
+    {
+        name: 'Mamy co robić',
+		num:2,
+        desc: 'Zadzwonił pan Wacław (74 lata) z Wrocławia. Uległ wypadkowi drogowemu i pół roku spędził w szpitalu. Tymczasem dług czynszowy rósł. Po wyjściu ze szpitala nie był w stanie pracować więc żył z zasiłków z pomocy społecznej po 400-500 zł miesięcznie.  Co miesiąc na poczet czynszu płaci 100 zł. Bo tylko tyle może. Do wypracowania okresów składkowych uprawniających do emerytury brakuje mu 7 miesięcy pracy.'
+    },
+    {
+        name: 'Walczymy z podłością',
+		num: 3,
+        desc: 'Pani Magdalena Wieczorek wraz z mężem i dwójką dzieci musieli uciekać z mieszkania. To był już trzeci pożar w tej kamienicy na warszawskiej Pradze, przy ul. 11 listopada.  Miasto umieściło ich w dawnym hotelu robotniczym, ale już 27 czerwca mają wracać do siebie. Tylko, ze nie chcą. Dzieci płaczą bo owo „u siebie” to 10 metrów kwadratowych na cztery osoby bez toalety.'
+    },
+	{
+		name: 'Reprywatyzacja: ułaskawienia nie będzie',
+		num: 4,
+		desc: ' Strach. Bezradność. Niedowierzanie. To pierwsze uczucia jakie towarzyszą informacji, że budynek, w którym mieszkają nie należy już do miasta tylko do prywatnego właściciela.  Kiedy w 1995 roku prezentowałem w Sejmie w imieniu Polskiej Partii Socjalistycznej projekt ustawy o wygaśnięciu roszczeń reprywatyzacyjnych nawet nam się nie śniło, że sądy do spółki z samorządami będą oddawać kamienice z lokatorami potomkom przedwojennych właścicieli.'
+	},
+	{
+		name: 'JUŻ MY CI POŻYCZYMY',
+		num: 7,
+		desc: 'Kuszenie trwa. Nie pękaj, weź kredyt, mamy mini ratę za maxi pożyczkę. Używaj życia. Potem się będziesz martwił. Brak ci gotówki? Jest na to jeden sposób. Pożyczka i na dodatek, kawa gratis. To wszystko w telewizji, w radio, kiedy jedziesz samochodem, na billbordach. Tylko o spłatach nic nie mówią. Proces spłat i egzekucji należności ukrywa się przed klientem jak ubój w rzeźni przed amatorami wędliny.'
+	}
+	] 
+    %}
+
 
 {% extends "layouts/default.njk" %}
+
 	{% block content %}
 		<div class="pubs grid-container">
-			<div class="pubs-cont">
-				{% include "modules/pubs-singleshort1.njk" %}
-				<a class="pubs-cont-readmore" href="pubs-single1.html">czytaj całość</a>
-			</div>
+			{# ARTICLE SHORTS #}
+			{% for art in artShorts %}
 
-			<div class="pubs-cont">
-				{% include "modules/pubs-singleshort2.njk" %}
-				<a class="pubs-cont-readmore" href="pubs-single2.html">czytaj całość</a>
-			</div>
+				<div class="pubs-cont">
+					<h3>{{ art.name }}</h3>
+					<p>{{ art.desc }}</p>
+					<a class="pubs-cont-readmore" href="pubs-single{{ art.num }}.html">czytaj całość</a>
+				</div>
 
-			<div class="pubs-cont">
-				{% include "modules/pubs-singleshort3.njk" %}
-				<a class="pubs-cont-readmore" href="pubs-single3.html">czytaj całość</a>
-			</div>
-
-			{# <div class="pubs-cont">
-				{% include "modules/pubs-singleshort4.njk" %}
-				<a class="pubs-cont-readmore" href="pubs-single4.html">czytaj całość</a>
-			</div> #}
+			{% endfor %}
 
 		</div>
 	{% endblock %}

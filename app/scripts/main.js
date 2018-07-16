@@ -1,7 +1,8 @@
 import { getRecentYTVid } from './ajax/YTAjax'
 import { createVidTape } from './components/YTDom'
 import { getBgVid } from './components/YTapi'
-import { scrollIntoView } from './jsUtils'
+import { scrollIntoView, mobileMenu } from './jsUtils'
+import { shortenArticels } from './onDomActions'
 
 window.onYouTubeIframeAPIReady = function (event) {
     // window.clicked=false;
@@ -36,17 +37,10 @@ window.onYouTubeIframeAPIReady = function (event) {
         });
         
 scrollIntoView('contact')
- var btn = document.querySelector('.hamburger')
- btn.addEventListener('click', function(){
-     this.classList.toggle('is-active')
-     var hamburgerMenu = document.getElementById('mobile-menu');
-     if (this.classList.contains('is-active')){
-         hamburgerMenu.classList.add('open')
-     }else{
-        hamburgerMenu.classList.remove('open')
-     }
- })
 
+mobileMenu();
+
+shortenArticels();
         
         
         
