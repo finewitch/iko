@@ -1,0 +1,47 @@
+.medialinks{
+
+     // text-transform: uppercase;
+     margin:140px auto 70px auto;
+     &-link{
+     width:90%;
+     background:#F9F9F9;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding:30px;
+     margin-bottom:40px;
+     &-img{
+          width:200px;
+          flex:1;
+         img{
+              max-width:100%;
+         }
+     }
+     &-content{
+          flex:5;
+          margin-left:100px;
+
+          p{
+               line-height: 30px;
+               font-size:1.1rem;
+          }
+     }
+     }
+}
+
+@media only screen and (max-width: $phone) {
+ .medialinks{
+     &-link{
+          width:100%;
+          display: flex;
+          flex-direction: column;
+          &-content{
+               margin-top:40px;
+               margin-left:0;
+               p{
+                    font-size:.85rem;
+               }
+          }
+     }
+ }    
+}

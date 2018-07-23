@@ -1,14 +1,13 @@
 import { getRecentYTVid } from './ajax/YTAjax'
 import { createVidTape } from './components/YTDom'
-import { getBgVid } from './components/YTapi'
 import { scrollIntoView, mobileMenu } from './jsUtils'
 import { shortenArticels } from './onDomActions'
 
 window.onYouTubeIframeAPIReady = function (event) {
     // window.clicked=false;
-    // getBgVid();
-
-    getRecentYTVid(passDataToPlayer);
+    setTimeout(()=>{
+        getRecentYTVid(passDataToPlayer);
+    }, 1000)
 
     function passDataToPlayer(playerSource) {
         // console.log(playerSource);

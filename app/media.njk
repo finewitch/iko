@@ -1,0 +1,62 @@
+
+{% set mediaLinks = [
+     {
+        logo: 'http://www.rdc.pl/n_rdclogo2.jpg',
+        link: 'http://www.rdc.pl/informacje/piotr-ikonowicz-bedzie-kandydowal-na-stanowisko-prezydenta-warszawy-posluchaj/',
+        desc: 'Ogłaszam swoją kandydaturę na prezydenta Warszawy – zadeklarował Piotr Ikonowicz z Ruchu Sprawiedliwości Społecznej.'
+    },
+    {
+        logo: 'https://bis.gazeta.pl/im/2/22623/m22623812.png',
+        link: 'http://www.tokfm.pl/Tokfm/7,103454,23381878,ikonowicz-czasem-nakladam-na-siostre-podatek-rewolucyjny-jem.html',
+        desc: 'Ikonowicz: Czasem nakładam na siostrę podatek rewolucyjny. Jem darmowy posiłek w jej restauracji.'
+    },
+    {
+        logo: 'http://bi.gazeta.pl/im/fe/72/10/z17245438V,gazeta_pl.jpg',
+        link: 'http://weekend.gazeta.pl/weekend/1,152121,20431787,ikonowicz-w-polsce-silny-bogacz-ma-wladze-nad-slabym-i-biednym.html',
+        desc: 'W Polsce silny bogacz ma władzę nad słabym i biednym. Ani PiS, ani KOD tego nie zmienią'
+    },
+    {
+        logo: 'http://bi.gazeta.pl/im/4/23541/m23541144,WYSOKIEOBCASYPL.svg',
+        link: 'http://www.wysokieobcasy.pl/wysokie-obcasy/1,96856,15579795,Agata_Nosal_Ikonowicz__Socjalistka.html?disableRedirects=true',
+        desc: 'Stajemy się maszynkami, które biegną do pracy, jeśli szczęśliwie ją mają, i myślą tylko o tym, żeby na wszystko starczyło. Coraz mniej wiemy o świecie i coraz mniej on nas obchodzi. Z Agatą Nosal-Ikonowicz rozmawia Alina Mrowińska, TVP'
+    },
+    {
+        logo: '//s.salon24.pl/gfx/logo_s24.png',
+        link: 'https://www.salon24.pl/u/consolamentum/818019,piotr-ikonowicz-iii-rp-to-strach,2',
+        desc: 'Zawsze stawałem po stronie ofiar transformacji. A jednak mojemu środowisku również nie udało się przekroczyć masy krytycznej, która zapewniłaby naprawdę szerokie poparcie społeczne.'
+    },
+    {
+        logo: 'http://www.marki2020.pl/logo_marki2020/tvnwarszawa_logo.gif',
+        link: 'https://tvnwarszawa.tvn24.pl/informacje,news,ponad-trzy-dekady-pracowala-dla-spoldzielni-teraz-chca-ja-eksmitowac,252761.html',
+        desc: 'Ponad trzy dekady pracowała dla spółdzielni. Teraz chcą ją eksmitować'
+    },
+    {
+        logo: 'https://beta.nowyobywatel.pl/wp-content/themes/wp-nowyobywatel/images/svg/logo-nowy-obywatel.svg',
+        link: 'https://beta.nowyobywatel.pl/2017/09/17/niemozliwe-zdarza-sie-codziennie/',
+        desc: 'Piotr Ikonowicz: Myśmy to marzenie zapisali z Józefem Piniorem w tekście „Rewolucja demokratyczna”. To był luty 1988 roku. Przewidzieliśmy, że będą strajki. Zapowiedzieliśmy, że upadnie system, że „mury runą”. Zapowiedzieliśmy również, że Polska Partia Socjalistyczna stanie na czele przełomu ustrojowego i z demokratycznej rewolucji wykluje się demokratyczny socjalizm. '
+    }
+    
+]
+ %}
+
+{% extends "layouts/default.njk" %}
+
+	{% block content %}
+		<div class="medialinks grid-container">
+          {# MEDIA --SHORTS #}
+               {% for link in mediaLinks %}
+                    <div class="medialinks-link">
+                         <div class="medialinks-link-img">
+                              <img src="{{ link.logo }}">
+                         </div>
+                         <div class="medialinks-link-content">
+                              <p>
+                              {{ link.desc}}
+                              </p>
+                              <a href="{{ link.link }}" target="_blank" class="pubs-cont-readmore">czytaj całość</a>
+                         </div>
+                    </div>
+               {% endfor %}
+
+		</div>
+	{% endblock %}
