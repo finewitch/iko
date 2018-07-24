@@ -23,3 +23,18 @@ export function mobileMenu(){
         })
     }
 }
+
+export function hideHotNews(){
+    // var pageOffset = window.pageYOffset;
+    // console.log('yolo', pageOffset);
+    var newsCont = document.querySelector('.recentnews-navigation');
+    window.onscroll = function() {
+        var currentPos = window.pageYOffset;
+        console.log(currentPos);
+        if(currentPos > 100){
+            newsCont.classList.add('hide-scroll')
+        }else{
+            newsCont.classList.remove('hide-scroll')
+        }
+    }
+}

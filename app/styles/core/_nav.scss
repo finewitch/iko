@@ -1,4 +1,7 @@
 
+.nav--white{
+    background: $main-white;
+}
 header{
     height: 70px;
     nav{
@@ -16,6 +19,8 @@ header{
             display: flex;
             align-items: center;
             margin:0 auto;
+            z-index:99;
+            position: relative;
             .main-navigation-logo{
                 margin-right:auto;
                 width:220px;
@@ -28,6 +33,7 @@ header{
                 justify-content: center;
                 align-items: center;
                 box-shadow: 7px 10px 68px -35px rgba(51,50,51,1);
+                z-index:99;
                 a{
                     height: 100%;
                     width: 100%;
@@ -87,6 +93,99 @@ header{
     }
 }
 
+header {
+    .recentnews-navigation{
+        height: 140px;
+        background-color:$main-red;
+        border-top:1px solid $main-red;
+        text-align:center;
+        transition: margin .5s;
+        z-index:98;
+        position: relative;
+        a.link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $main-red;
+            text-transform: uppercase;
+            margin:0;
+            height:100%;
+            width:100%;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .grid-container{
+            height:100%;
+        }
+        &-sign{
+            // border:1px solid $main-white;
+            width:220px;
+            height:65px;
+            background: $main-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+            &:hover{
+                text-decoration: none;
+                opacity:.6;
+                transition: all .5s;
+            }
+        }
+        &-event{
+            // border:3px solid brown;
+            height:100%;
+            margin-left:100px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover{
+                background: $main-white;
+                transition: all .5s;
+                text-decoration: none;
+                p{
+                    color: $main-red;
+                }
+            }
+            p{
+                color:$main-white;
+                max-width: 200px;
+                font-size: 1.05rem;
+                margin:0;
+                margin-right:35px;
+                text-transform: uppercase;
+            }
+            img{
+                height:70%;
+            }
+        }
+        @media only screen and (max-width: $phone) {
+            height:100px;
+            .link{
+                font-size:.8rem;
+            }
+            &-event{
+                margin-left:auto;
+                padding: 0 10px;
+                &:hover{
+                    background:none;
+                }
+                p{
+                    font-size:.73rem;
+                    margin-right:0;
+                }
+                img{
+                    max-width: 90px;
+                    height:auto;
+                }
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: $phone) {
     #hamburger-1{
@@ -113,7 +212,7 @@ header{
         border:2px solid red;
         border-style:none none solid none;
         position: absolute;
-        height:500px;
+        height:100vh;
         background: white;
         width:100vw;
         top:70px;
@@ -130,5 +229,10 @@ header{
     // .mobile-show{
     //     display: none;
     // }
+}
+
+.hide-scroll{
+    margin-top:-300px;
+    transition: margin .5s;
 }
 

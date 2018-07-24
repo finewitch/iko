@@ -12,7 +12,7 @@ export function getRecentYTVid(passDataToPlayer) {
                 'hd': 1,
                 'width': '450px',
             },
-            dataType: 'jsonp'
+            dataType: 'json'
         }).done((response) => {
             // console.log(response, 'response');
 

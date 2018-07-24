@@ -1,6 +1,6 @@
 import { getRecentYTVid } from './ajax/YTAjax'
 import { createVidTape } from './components/YTDom'
-import { scrollIntoView, mobileMenu } from './jsUtils'
+import { scrollIntoView, mobileMenu, hideHotNews } from './jsUtils'
 import { shortenArticels } from './onDomActions'
 
 window.onYouTubeIframeAPIReady = function (event) {
@@ -38,6 +38,8 @@ window.onYouTubeIframeAPIReady = function (event) {
 scrollIntoView('contact')
 
 mobileMenu();
+
+hideHotNews();
 
 shortenArticels();
         

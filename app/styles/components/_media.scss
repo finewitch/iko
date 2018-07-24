@@ -28,7 +28,11 @@
      }
      }
 }
-
+@media only screen and (max-width: $laptop) {
+    .medialinks{
+        margin-top:120px;
+    }
+}
 @media only screen and (max-width: $phone) {
  .medialinks{
      &-link{
