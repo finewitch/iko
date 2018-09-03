@@ -50,15 +50,15 @@ export function createVidTape(playerSource){
         }); 
 
         function onPLayerStateChange(event) {
-            console.log('state', event);
+            // console.log('state', event);
 
         }
 
         function onPlayerReady(event) {
-            console.log('ready!!!', event);
+            // console.log('ready!!!', event);
         }
         function onPlayerError(event){
-            console.log(event);
+            // console.log(event);
         }
 
     }

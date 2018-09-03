@@ -152,7 +152,23 @@ a.a-basic{
     flex-wrap: nowrap;
 }
 
-
+#fb-share{
+    height:47px;
+    display: flex;
+    align-items:center;
+    text-transform: uppercase;
+    background:blue;
+    color:white;
+    padding-right: 15px;
+    cursor: pointer;
+        img{
+            // width:45px;
+            max-height: 100%;
+            display: block;
+            margin-right:20px;
+            background:#fefefe;
+        }
+}
 @media only screen and (max-width: $phone) {
     .border-white{
         width:90%;

@@ -1,11 +1,12 @@
 {% extends "layouts/default.njk" %}
 	{% block content %}
           <div class="pubs-single grid-container">
+                <div data-og-num="5"></div>
                <div class="article-header">
-                    <h2>Nie oddawać Polski w naturze</h2>
+                    <h2 data-og="ogtitle">Nie oddawać Polski w naturze</h2>
                </div>
                <div class="pubs-single-content">
-                    <p>
+                    <p data-og="ogdesc">
                          Przyszła do mnie starsza pani. Właściciel zreprywatyzowanej kamienicy żąda od niej 1700 zł czynszu, a ona ma tylko 1600 zł. emerytury.  Takich krzywdzonych na co dzień ludzi, rodzin są dziesiątki tysięcy, a będzie ich przybywać jeżeli nadal będą oddawane domy z lokatorami. 
                     </p>
                     <p>
@@ -61,7 +62,14 @@
                     <p>
                          Dobra zmiana znalazła się na zakręcie. Ustawa Jakiego odłożona na półkę, ustawa anty-lichwiarska stoi w miejscu, a reklamy lichwiarzy wciąż królują na antenie TVP, anty-pracownicze zmiany w kodeksie pracy.  A szkoda bo już, już zaczynaliśmy wreszcie wierzyć, że żyjemy we własnym domu. Tymczasem do tego domu, do Polski wciąż są jakieś roszczenia. 
                     </p>
-                   <a href="pubs.html" class="pubs-cont-readmore">Czytaj inne</a>
+
+                    <div class="btn-group">
+                         <a href="pubs.html" class="pubs-cont-readmore">Czytaj inne</a>
+                         <a id="fb-share" class="">
+                              <img src="images/icons/fb.svg">share
+                         </a>
+                    </div>
+                    
                </div>
           </div>
 {% endblock %}

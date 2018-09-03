@@ -1,12 +1,13 @@
 {% extends "layouts/default.njk" %}
 	{% block content %}
           <div class="pubs-single grid-container">
+            <div data-og-num="1"></div>
                <div class="article-header">
-                    <h2>Już my ci pożyczymy!</h2>
+                    <h2 data-og="ogtitle">Już my ci pożyczymy!</h2>
                </div>
                <div class="pubs-single-content">
                     <p>
-                         Wszystko dzieje się w sposób opisany tysiące razy w różnych religijnych przypowieściach. Najpierw diabeł kusi, a potem odbiera nam duszę, by na koniec wysłać do piekła. „Jestem w niebie”, śpiewa ochrypłym głosem Louis Armstrong, podczas gdy piękny młodzian pomyka wstęgą szos z super laską u boku. A wszystko to można mieć za jedne tyle i tyle miesięcznej raty. Kuszenie trwa. Nie pękaj, weź kredyt, mamy mini ratę za maxi pożyczkę. Używaj życia. Potem się będziesz martwił. Brak ci gotówki? Jest na to jeden sposób. Pożyczka i na dodatek, kawa gratis. To wszystko w telewizji, w radio, kiedy jedziesz samochodem, na billbordach. Tylko o spłatach nic nie mówią. Proces spłat i egzekucji należności ukrywa się przed klientem jak ubój w rzeźni przed amatorami wędliny.  
+                         Wszystko dzieje się w sposób opisany tysiące razy w różnych religijnych przypowieściach. Najpierw diabeł kusi, a potem odbiera nam duszę, by na koniec wysłać do piekła. „Jestem w niebie”, śpiewa ochrypłym głosem Louis Armstrong, podczas gdy piękny młodzian pomyka wstęgą szos z super laską u boku. A wszystko to można mieć za jedne tyle i tyle miesięcznej raty.<span data-og="ogdesc">Kuszenie trwa. Nie pękaj, weź kredyt, mamy mini ratę za maxi pożyczkę. Używaj życia. Potem się będziesz martwił. Brak ci gotówki? Jest na to jeden sposób. Pożyczka i na dodatek, kawa gratis. To wszystko w telewizji, w radio, kiedy jedziesz samochodem, na billbordach. Tylko o spłatach nic nie mówią.</span> Proces spłat i egzekucji należności ukrywa się przed klientem jak ubój w rzeźni przed amatorami wędliny.  
                     </p>
                     <p>
                         A to przecież ta sama korporacja, która robiła ci wodę z mózgu żebyś się zadłużył, wynajmuje firmy windykacyjne, kieruje wnioski do sądów, napuszcza komorników. Ludzie-słuchawki, windykatorzy dzwonią, wysyłają sms-y a nawet telegramy. Ich głównym zadaniem jest ciebie zawstydzić albo nastraszyć. A najlepiej i zawstydzić i nastraszyć. Byłeś lekkomyślny kupując samochód. Okazałeś się nieuczciwy. Wyłudziłeś kredyt, którego nie spłacasz. Nieładnie. Cóż ciebie za człowiek. Uczciwi ludzie tak nie postępują. Taki zapędzony do kąta klient nawet już nie pamięta, że ta sama firma, która go teraz dręczy jeszcze niedawno go kusiła, namawiała wszelkimi sposobami by się zadłużył, kupił, konsumował. Teraz już wie, że się pomylił. Nie jest i nigdy nie będzie tym przystojniakiem z reklamy Toyoty. Jest frajerem i nieudacznikiem. Żyje w rosnącym przerażeniu. Co będzie jak się żona (mąż) dowie? Jak to powiedzieć dzieciom? Co zrobić, kiedy komornik zajmie pół pensji, która i tak przecież nie starczała i z powodu, której się zadłużył, bo była za mała właśnie?
@@ -17,7 +18,14 @@
                     <p>                        
                          Kiedy to jednak nastąpi. Gdy żona z dziećmi wyląduje, w dobrych układach u ciotki, a ty zamieszkasz w jakiejś norze pod miastem, zobaczysz w telewizji miłych ludzi, którzy postanowili w trosce o twoje oszczędności dokapitalizować bank, który zdarł z ciebie ostatnią koszulę. Z jakich pieniędzy? No oczywiście z pieniędzy podatników, a więc również twoich. Obok tego, co z każdego nędznego zarobku zabiera ci bank rękami komornika, wpłacisz jeszcze do tego banku dofinansowanie ze swoich podatków, żeby ci, którym się udało i mają coś na koncie, a nie zablokowane puste konto, mogli spać spokojnie. Ale nawet tam, na dnie piekła dopadną cię ludzie-słuchawki i będą wyrażać wielkie zdziwienie, że zalegasz ze 136 ratą kredytu na mieszkanie, które ci już dawno zlicytowano. Bo licytacja była tak sprytnie przeprowadzona, że zarobił komornik, kupiec, a wierzyciel dostał jakieś ochłapy, które od razu „łyknął” na odsetki. Mimo, że komornik odbiera połowę zarobków, albo wszystko jeżeli capnie jakieś dodatkowe zlecenie czy inna chałturę „o dzieło”, to twoje zadłużenie i tak stale rośnie. Jesteś załatwiony. Rozkład pożycia małżeńskiego i rozpad rodziny dokonuje się niejako sam przez się, bo nie macie mieszkania. Rozwód jest kwestią czasu i tych kilkuset złotych żeby go przeprowadzić. Nadszedł już czas najwyższy abyś poszedł do psychiatry. I jeżeli jakimś cudem masz jeszcze ubezpieczenie zdrowotne, to najlepiej zrobisz zapisując się na wizytę. Czekasz 6 miesięcy. Wizyta trwa 10 minut. To za mało, żeby cię przekonać, że warto dalej żyć. Im szybciej umrzesz tym szybciej przestanie rosnąć twój dług.
                    </p>
-                   <a href="pubs.html" class="pubs-cont-readmore">Czytaj inne</a>
+
+                   <div class="btn-group">
+                         <a href="pubs.html" class="pubs-cont-readmore">Czytaj inne</a>
+                         <a id="fb-share" class="">
+                              <img src="images/icons/fb.svg">share
+                         </a>
+                    </div>
+                    
                </div>
           </div>
 {% endblock %}
